@@ -4,7 +4,7 @@ import json
 
 app = FastAPI()
 
-client = bigquery.Client()
+client = bigquery.Client(project="vitor-oliveira-analytics")
 
 TABLE_ID = "vitor-oliveira-analytics.tracking.events_raw"
 

@@ -97,5 +97,5 @@ async def event(request: Request):
             "status": "error",
             "details": errors
         }
-
+    print("CI/CD test v1")
     return {"status": "ok"}

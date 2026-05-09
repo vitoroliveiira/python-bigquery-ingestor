@@ -27,11 +27,17 @@ steps:
       - --platform
       - managed
       - --allow-unauthenticated
+
+      # remove variável antiga do Cloud Run
+      - --remove-env-vars
+      - SECRET_KEY
+
+      # adiciona Secret Manager
       - --update-secrets
       - SECRET_KEY=tracking-api-secret-key:latest
 
 images:
-  - southamerica-east1-docker.pkg.dev/$PROJECT_ID/tracking-repo/tracking-api
+  - 'southamerica-east1-docker.pkg.dev/$PROJECT_ID/tracking-repo/tracking-api'
 
 options:
-  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
+  logging: CLOUD_LOGGING_ONLY

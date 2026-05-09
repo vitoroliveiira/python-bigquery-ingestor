@@ -34,4 +34,4 @@ images:
   - southamerica-east1-docker.pkg.dev/$PROJECT_ID/tracking-repo/tracking-api
 
 options:
-  logging: CLOUD_LOGGING_ONLY
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET

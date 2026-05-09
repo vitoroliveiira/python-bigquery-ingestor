@@ -97,5 +97,5 @@ async def event(request: Request):
             "status": "error",
             "details": errors
         }
-    print("TESTE2")
+    print("TESTE3")
     return {"status": "ok"}
